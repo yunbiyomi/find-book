@@ -52,6 +52,7 @@ const SearchPage = () => {
         >
           "<strong>{searchTerm}</strong>" 책을 찾고 있습니다.
         </Loader>
+        <BookList books={books} />
       </Container>
     </>
   )
