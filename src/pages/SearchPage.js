@@ -4,6 +4,7 @@ import BookSearchForm from '../components/BookSearchForm'
 import axios from 'axios';
 import Loader from '../components/Loader';
 import BookList from '../components/BookList';
+import { Container, Header, HeaderContainer, LogoText } from '../components/Shared';
 
 const SearchPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -13,7 +14,6 @@ const SearchPage = () => {
   const API_BASE_URL = `https://www.googleapis.com/books`;
 
   const fetchBooks = async () => {
-    
     setLoading(true);
     try {
       const response = await axios.get(`${API_BASE_URL}/v1/volumes?q=${searchTerm}`)
@@ -62,30 +62,6 @@ const SearchPage = () => {
 }
 
 export default SearchPage
-
-const Header = styled.header`
-  border-bottom: 1px solid #221F1B;
-`;
-
-const Container = styled.div`
-  max-width: 960px;
-  padding: 15px;
-  margin: 0 auto;
-`;
-
-const HeaderContainer = styled(Container)`
-  display: flex;
-  align-items: center;
-
-  @media (max-width: 778px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`;
-
-const LogoText = styled.h1`
-  margin: 0;
-`;
 
 const HeaderSearchForm = styled.div`
   margin-left: auto;

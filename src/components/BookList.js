@@ -36,10 +36,6 @@ const BookList = ({ books }) => {
       </ul>
     )
   }
-
-  return (
-    <div>BookList</div>
-  )
 }
 
 export default BookList
