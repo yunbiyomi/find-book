@@ -21,6 +21,9 @@ const SearchPage = () => {
     } catch (error) {
       console.log(error);
     }
+    finally {
+      setLoading(false);
+    }
   }
 
   const handleChange = e => {

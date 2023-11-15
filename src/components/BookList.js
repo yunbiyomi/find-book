@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import formatAuthors from '../helpers/formatAuthors'
 
 const Book = ({book}) => {
   return (
@@ -13,7 +14,7 @@ const Book = ({book}) => {
           <Link to={`/book/${book.id}`}>
             <h3>{book.volumeInfo.title}</h3>
           </Link>
-          <p>{book.volumeInfo.authors}</p>
+          <p>{formatAuthors(book.volumeInfo.authors)}</p>
           <p>{book.volumeInfo.publishedDate}</p>
         </div>
       </div>
