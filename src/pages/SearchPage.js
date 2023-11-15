@@ -2,6 +2,8 @@ import styled from '@emotion/styled'
 import React, { useState } from 'react'
 import BookSearchForm from '../components/BookSearchForm'
 import axios from 'axios';
+import Loader from '../components/Loader';
+import BookList from '../components/BookList';
 
 const SearchPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -44,6 +46,13 @@ const SearchPage = () => {
           </HeaderSearchForm>
         </HeaderContainer>
       </Header>
+      <Container>
+        <Loader
+          loading={loading}
+        >
+          "<strong>{searchTerm}</strong>" 책을 찾고 있습니다.
+        </Loader>
+      </Container>
     </>
   )
 }
