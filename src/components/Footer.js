@@ -14,7 +14,7 @@ const Footer = ({ isDark, setIsDark }) => {
       <button
         css={css`
           background-color: ${isDark ? '#DED6CE' : '#5E503F'};
-          color: ${isDark ? '#0A0908' : '#F2F4F3'};
+          color: ${isDark ? '#221F1B' : '#F2F4F3'};
           padding: 1rem;
           margin-left: 15px;
           border-radius: 3px;
@@ -23,7 +23,7 @@ const Footer = ({ isDark, setIsDark }) => {
           
           &:hover {
             background-color: ${isDark ? '#5E503F' : '#DED6CE'};
-            color: ${isDark ? '#F2F4F3' : '#0A0908'};
+            color: ${isDark ? '#F2F4F3' : '#221F1B'};
           }
       `}
         onClick={() => setIsDark(!isDark)}

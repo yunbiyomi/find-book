@@ -1,5 +1,5 @@
 export const themLight = {
-  text: "#0A0908",
+  text: "#221F1B",
   background: "#DED6CE"
 }
 
